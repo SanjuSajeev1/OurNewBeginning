@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Patrick+Hand&family=Playfair+Display:wght@500;600&display=swap');
 
 .app-shell {
   position: relative;
@@ -95,6 +95,28 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+
+.screen6-background {
+  position: relative;
+  overflow: hidden;
+  justify-content: center;
+  background-image: url('/images/screen6.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.screen6-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.42);
+}
+
+.screen6-text {
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.6);
 }
 
 .bottom-nav {
@@ -323,6 +345,72 @@
 .screen8-line-2 {
   font-size: clamp(28px, 4.4vw, 34px);
   line-height: 1.35;
+}
+
+.screen20-romance {
+  position: relative;
+  overflow: hidden;
+  justify-content: center;
+  background: linear-gradient(to bottom, #ffc6b3, #ffd9e8, #fff4e6);
+}
+
+.screen20-hearts-outline,
+.screen20-sparkles,
+.screen20-tiny-hearts {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.screen20-heart-outline {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.22);
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  filter: blur(0.2px);
+}
+
+.screen20-heart-outline.heart-a {
+  top: 14%;
+  left: 13%;
+}
+
+.screen20-heart-outline.heart-b {
+  top: 22%;
+  right: 14%;
+}
+
+.screen20-heart-outline.heart-c {
+  bottom: 20%;
+  left: 46%;
+}
+
+.screen20-sparkle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+.screen20-text {
+  position: relative;
+  z-index: 2;
+  max-width: 24ch;
+  color: #fffdf9;
+  font-family: 'Playfair Display', 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: clamp(2rem, 4.6vw, 2.8rem);
+  letter-spacing: 0.06em;
+  line-height: 1.55;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2), 0 6px 24px rgba(131, 72, 96, 0.2);
+}
+
+.screen20-tiny-heart {
+  position: absolute;
+  top: 52%;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.78rem;
 }
 
 .app-shell.diary-mode {
