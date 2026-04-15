@@ -827,6 +827,29 @@
   margin: 0;
 }
 
+.screen51-choose-wrap {
+  width: min(100%, 30rem);
+  display: grid;
+  justify-items: center;
+  gap: 0.9rem;
+}
+
+.screen51-choose-image {
+  width: min(100%, 16rem);
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.28);
+}
+
+.screen51-diary {
+  background: #6c4dcf;
+}
+
+.screen51-diary:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 0 20px rgba(108, 77, 207, 0.45);
+}
+
 .screen51-heart {
   font-size: 1.25rem;
   line-height: 1;
