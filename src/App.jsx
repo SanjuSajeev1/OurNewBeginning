@@ -36,6 +36,20 @@ function App() {
     return () => clearTimeout(timer);
   }, [screenIndex, showDiary]);
 
+  useEffect(() => {
+    const bgMusic = document.getElementById("bgMusic");
+    if (!bgMusic) return;
+
+    bgMusic.loop = true;
+    const handleEnded = () => {
+      bgMusic.currentTime = 0;
+      bgMusic.play().catch(() => {});
+    };
+
+    bgMusic.addEventListener("ended", handleEnded);
+    return () => bgMusic.removeEventListener("ended", handleEnded);
+  }, []);
+
   return (
     <main
       className={`app-shell ${showDiary ? "diary-mode" : ""} ${isBrightSlides ? "bright-mode" : ""} ${isFinalPage ? "final-scroll-mode" : ""}`}
